@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Analysis of Global Terrorism Database">
+
+	<title>Analysis of Global Terrorism Database</title>
+
+	<!-- CSS -->
+	<script src="
+      https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js
+      "></script>
+	      <script src="scripts/sunburst.js"></script>
+    <script src="libraries/d3.min.js"></script>
+    <script src="third-party/d3-tip.js"></script>
+    <script src="libraries/jquery.min.js"></script>
+    <script src="libraries/selectize.min.js"></script>
+	<link rel="stylesheet" href="css/midnight-styles.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/d3.css">
+	<link rel="stylesheet" href="css/selectize.css">
+
+	<style>
+  @font-face {
+            font-family: 'MyCustomFont';
+            src: url('./fonts/PermanentMarker-Regular.ttf') format('truetype');
+            /* You may also include other font formats like woff, woff2 for better compatibility */
+        }
+        
+        /* Apply font to elements */
+        body {
+            font-family: 'MyCustomFont', sans-serif;
+			background: linear-gradient(to bottom, #cae0da, #04fa6f); /* Gradient background */
+            /* You can adjust the colors and direction as needed */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+			 /* Use MyCustomFont, fallback to sans-serif if not available */
+        }
+
+        h1, h2, h3 {
+            font-family: 'MyCustomFont', serif; /* Use MyCustomFont, fallback to serif if not available */
+        }
+		 #chart-container {
+        /* display: flex; */
+        flex-direction: row;
+      }
+	  .cont{
+		padding: 15;
+		border: 1px solid black;
+	  }
+      #chart1,
+      #chart2 {
+        width: 800px;
+        height: 600px;
+        margin: 20px;
+      }
+      #scatterplot {
+        width: 100%;
+        height: 700px;
+      }
+	  #globe{
+		/* display: flex; */
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		padding: 50px;
+	  }
+	  #globe section{
+		width: 100%;
+		font-size: 22px;
+		color: black;
+	  }
+	  #animate-chart-button{
+		padding: 10px 20px;
+		background-color: "#007bff";
+		color: "#fff";
+		/* position: relative; */
+	  }
+	  .wrapper {
+  margin: auto;
+  border:1px solid black;
+  width: 90%;
+  position: relative;
+}
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+      }
+	  .des{
+		font-size: 22px;
+
+	  }
+
+	</style>
+</head>
+
+<body>
+	
+	<!-- end header -->
+	<div class="wrapper">
+		<section>
+			<div id="title" style="text-align: center;">
+				<h1>Data Visualisation Final Project</em></h1>
+				<h5>On Global Terrorism Database</h5>
+				<hr class="dashed">
+				<span class="credits">Project done by Kanishka Patre, Pranshu Acharya, Sinchan Samajdar, Ayush Tiwari.</span>
+			</div>
+		</section>
+		<!-- Globe starts here -->
+		<div class="cont" id="globe">
+		<section>
+			<div id="section-choropleth" class="anchor"></div>
+			
+			<div class="half" style="margin: 0 auto; text-align: center;">
+				<select id="choropleth-select-category" placeholder="Select category...">
+
+				</select>
+				<select id="choropleth-select-subcategory" placeholder="Select subcategory...">
+
+				</select>
+				<select id="choropleth-select-metric" placeholder="Select metric...">
+
+				</select>
+			</div>
+			<div class="middle">
+				<div class="slider-title">Temporal Distribution</div>
+				<div>
+					<span class="slider-min" id="choropleth-slider-min">1970</span>
+					<input class="slider-range" id="choropleth-slider-range" type="range" value="1970" min="1970" max="2015" step="1">
+					<span class="slider-max" id="choropleth-slider-max">2015</span>
+				</div>
+				<div class="slider-button">
+					<a class="btn" id="choropleth-slider-button">Time Machine</a>
+				</div>
+			</div>
+			<div class="loader"></div>
+			<div id="choropleth" style="display:none;">
+				<svg id="svg-choropleth">
+
+					</svg>
+			</div>
+		</section>
+		<section class=".des" >
+			This choropleth map visualization displays the global distribution of terrorist attacks on a virtual globe. Users can filter by category like terrorist group, metric like fatalities, and year using the slider to see how patterns change over time. Hovering over countries reveals details, while the "Time Machine" animates the year-by-year changes. Rotate the globe or click on countries to explore regional patterns.
+		</section>
+
+		
+	</div>
+	<!-- Line chart starts here  -->
+	<div class="cont" style="width: 100%; display: flex;text-align: center; padding: 10%;">
+		<div id="line-chart-container" style="width:100%; background-color: white; padding: 1%; ">
+		</div>
+		<div style="width:100%; margin: auto;">
+			<section class="des" id="line-chart-description"  > What is Lorem Ipsum?
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				<br/>
+			</section>
+			<button id="animate-chart-button" style="border-radius: 5px;font-family: MyCustomFont;background-color: rgb(27, 24, 24); color: white;">Plot graph</button>
+		</div>
+			
+	</div>
+
+<script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script src="./linechart.js"></script>
+<!-- Line chart ends here -->
+
+ <!-- scatterplot starts here -->
+		<div class="cont" id="scattercontainer" style="padding: 10%;" >
+     <div style="width: 100%; ">
+		<div id="scatterplot"  >
+			<svg id="svg-scatterplot"></svg>
+		  </div>
+	
+		  <div style=" width: 30%; margin: auto;">
+			<select
+			  id="scatterplot-select-category"
+			  placeholder="Select a category..."
+			></select>
+			<select
+			  id="scatterplot-select-subcategory"
+			  placeholder="Select a subcategory..."
+			></select>
+			<select
+			  id="scatterplot-select-type"
+			  placeholder="Select a type..."
+			></select>
+			<select
+			  id="scatterplot-select-role"
+			  placeholder="Select role..."
+			></select>
+			<input
+			  id="scatterplot-button-relative"
+			  type="radio"
+			  name="options"
+			  autocomplete="off"
+			  checked
+			/>
+			<label for="scatterplot-button-relative">
+			  <span></span>
+			  Relative
+			</label>
+	
+			<input
+			  id="scatterplot-button-absolute"
+			  type="radio"
+			  name="options"
+			  autocomplete="off"
+			/>
+			<label for="scatterplot-button-absolute">
+			  <span></span>
+			  Absolute
+			</label>
+		  </div>
+	 </div>
+	<section id="scatter-plot-description" style="font-size: 22px;">
+		The interactive scatterplot allows users to compare categorical variables like weapon type against numeric metrics like killed and wounded, encoded by circle position and size respectively. Filter by aggregation level, item, metric type, and role (victims/terrorists). Toggle between relative averages per attack or absolute sums. Hover over circles for details on the most lethal, effective, or vulnerable types.
+	</section>
+
+
+    </div>
+<!-- Scatter plot ends here -->
+
+<!-- sburst starts here -->
+	<div class="cont" id="chart-container" style="padding: 10%;">
+       <div style="display: flex;">
+		<h2>Suicide Attack Locations</h2>
+		<div id="chart1" style="width: 800px; height: 600px">
+		</div>
+		<h2>Attack Types</h2>
+		<div id="chart2" style="width: 800px; height: 600px">
+		</div>
+	   </div>
+	  <section style="font-size: 22px;">
+		The sunburst charts provide a hierarchical, radial view of terrorist incident data. The left chart shows a breakdown across geographic regions and countries, with ring sizes proportional to incident counts, revealing hotspots. The right chart depicts attack type categories, like bombings and assassinations, with ring sizes indicating prevalence. These compact, nested layouts effectively convey hierarchical distributions and relative contributions, enabling rapid pattern understanding of both the spread and methodologies of terrorist activities.
+	  </section>
+    </div>
+	<!-- sburst ends here -->
+	 <!-- <script src="/loadData.js"></script> -->
+    <script src="/scatterplot.js"></script>
+    <script>
+      loadData(function () {
+        loadScatterplot();
+	
+      });
+    </script>
+
+	</div>
+
+	<script src="libraries/jquery.min.js"></script>
+	<script src="libraries/d3.min.js"></script>
+	<script src="libraries/d3-hexbin.min.js"></script>
+	<script src="libraries/selectize.min.js"></script>
+
+	<!-- D3 tip -->
+	<script src="js/third-party/d3-tip.js"></script>
+	<script src="js/third-party/kdTree.js"></script>
+
+	<!-- Charts -->
+	<script src="js/choropleth.js"></script>
+	<script>
+		// Callback
+		var callCharts = function() {
+
+			var loaders = document.getElementsByClassName("loader");
+
+			for (var i = 0; i < loaders.length; i++) {
+				loaders[i].style.display = "none";
+			}
+			document.getElementById("choropleth").style.display = "block";
+			loadChoropleth();
+
+		}
+
+		loadData(callCharts);
+	</script>
+
+</body>
+
+</html>

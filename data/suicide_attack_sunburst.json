@@ -1,0 +1,429 @@
+[
+    {
+        "name": "Suicide Attacks",
+        "children": [
+            {
+                "name": "Africa",
+                "children": [
+                    {
+                        "name": "Middle East & North Africa",
+                        "children": [
+                            {
+                                "name": "Algeria",
+                                "value": 34
+                            },
+                            {
+                                "name": "Egypt",
+                                "value": 80
+                            },
+                            {
+                                "name": "Libya",
+                                "value": 125
+                            },
+                            {
+                                "name": "Morocco",
+                                "value": 11
+                            },
+                            {
+                                "name": "Tunisia",
+                                "value": 14
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Sub-Saharan Africa",
+                        "children": [
+                            {
+                                "name": "Burkina Faso",
+                                "value": 2
+                            },
+                            {
+                                "name": "Cameroon",
+                                "value": 104
+                            },
+                            {
+                                "name": "Chad",
+                                "value": 18
+                            },
+                            {
+                                "name": "Djibouti",
+                                "value": 1
+                            },
+                            {
+                                "name": "Ethiopia",
+                                "value": 1
+                            },
+                            {
+                                "name": "Kenya",
+                                "value": 7
+                            },
+                            {
+                                "name": "Mali",
+                                "value": 45
+                            },
+                            {
+                                "name": "Mauritania",
+                                "value": 3
+                            },
+                            {
+                                "name": "Niger",
+                                "value": 21
+                            },
+                            {
+                                "name": "Nigeria",
+                                "value": 479
+                            },
+                            {
+                                "name": "Somalia",
+                                "value": 261
+                            },
+                            {
+                                "name": "South Africa",
+                                "value": 1
+                            },
+                            {
+                                "name": "South Sudan",
+                                "value": 1
+                            },
+                            {
+                                "name": "Tanzania",
+                                "value": 1
+                            },
+                            {
+                                "name": "Uganda",
+                                "value": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Asia",
+                "children": [
+                    {
+                        "name": "South Asia",
+                        "children": [
+                            {
+                                "name": "Afghanistan",
+                                "value": 1487
+                            },
+                            {
+                                "name": "Bangladesh",
+                                "value": 13
+                            },
+                            {
+                                "name": "India",
+                                "value": 66
+                            },
+                            {
+                                "name": "Pakistan",
+                                "value": 557
+                            },
+                            {
+                                "name": "Sri Lanka",
+                                "value": 120
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Central Asia",
+                        "children": [
+                            {
+                                "name": "Armenia",
+                                "value": 1
+                            },
+                            {
+                                "name": "Azerbaijan",
+                                "value": 1
+                            },
+                            {
+                                "name": "Kazakhstan",
+                                "value": 2
+                            },
+                            {
+                                "name": "Kyrgyzstan",
+                                "value": 1
+                            },
+                            {
+                                "name": "Tajikistan",
+                                "value": 1
+                            },
+                            {
+                                "name": "Uzbekistan",
+                                "value": 6
+                            }
+                        ]
+                    },
+                    {
+                        "name": "East Asia",
+                        "children": [
+                            {
+                                "name": "China",
+                                "value": 17
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Southeast Asia",
+                        "children": [
+                            {
+                                "name": "Indonesia",
+                                "value": 25
+                            },
+                            {
+                                "name": "Philippines",
+                                "value": 18
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Middle East & North Africa",
+                        "children": [
+                            {
+                                "name": "Iran",
+                                "value": 13
+                            },
+                            {
+                                "name": "Iraq",
+                                "value": 2709
+                            },
+                            {
+                                "name": "Israel",
+                                "value": 123
+                            },
+                            {
+                                "name": "Jordan",
+                                "value": 5
+                            },
+                            {
+                                "name": "Kuwait",
+                                "value": 3
+                            },
+                            {
+                                "name": "Lebanon",
+                                "value": 69
+                            },
+                            {
+                                "name": "Qatar",
+                                "value": 1
+                            },
+                            {
+                                "name": "Saudi Arabia",
+                                "value": 26
+                            },
+                            {
+                                "name": "Syria",
+                                "value": 410
+                            },
+                            {
+                                "name": "United Arab Emirates",
+                                "value": 1
+                            },
+                            {
+                                "name": "Yemen",
+                                "value": 232
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Asia/Europe",
+                "children": [
+                    {
+                        "name": "Middle East & North Africa",
+                        "children": [
+                            {
+                                "name": "Turkey",
+                                "value": 81
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Europe",
+                "children": [
+                    {
+                        "name": "Western Europe",
+                        "children": [
+                            {
+                                "name": "Austria",
+                                "value": 1
+                            },
+                            {
+                                "name": "Belgium",
+                                "value": 3
+                            },
+                            {
+                                "name": "Finland",
+                                "value": 1
+                            },
+                            {
+                                "name": "France",
+                                "value": 10
+                            },
+                            {
+                                "name": "Germany",
+                                "value": 2
+                            },
+                            {
+                                "name": "Italy",
+                                "value": 1
+                            },
+                            {
+                                "name": "Netherlands",
+                                "value": 2
+                            },
+                            {
+                                "name": "Spain",
+                                "value": 2
+                            },
+                            {
+                                "name": "Sweden",
+                                "value": 1
+                            },
+                            {
+                                "name": "United Kingdom",
+                                "value": 10
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Eastern Europe",
+                        "children": [
+                            {
+                                "name": "Bulgaria",
+                                "value": 1
+                            },
+                            {
+                                "name": "Croatia",
+                                "value": 2
+                            },
+                            {
+                                "name": "Czech Republic",
+                                "value": 1
+                            },
+                            {
+                                "name": "Montenegro",
+                                "value": 1
+                            },
+                            {
+                                "name": "Ukraine",
+                                "value": 3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Europe/Asia",
+                "children": [
+                    {
+                        "name": "Eastern Europe",
+                        "children": [
+                            {
+                                "name": "Russia",
+                                "value": 91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "North America",
+                "children": [
+                    {
+                        "name": "North America",
+                        "children": [
+                            {
+                                "name": "Canada",
+                                "value": 2
+                            },
+                            {
+                                "name": "Mexico",
+                                "value": 1
+                            },
+                            {
+                                "name": "United States",
+                                "value": 19
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Central America & Caribbean",
+                        "children": [
+                            {
+                                "name": "Panama",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Oceania",
+                "children": [
+                    {
+                        "name": "Australasia & Oceania",
+                        "children": [
+                            {
+                                "name": "Australia",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "South America",
+                "children": [
+                    {
+                        "name": "South America",
+                        "children": [
+                            {
+                                "name": "Argentina",
+                                "value": 2
+                            },
+                            {
+                                "name": "Brazil",
+                                "value": 1
+                            },
+                            {
+                                "name": "Colombia",
+                                "value": 5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Unknown",
+                "children": [
+                    {
+                        "name": "Middle East & North Africa",
+                        "children": [
+                            {
+                                "name": "International",
+                                "value": 1
+                            },
+                            {
+                                "name": "West Bank and Gaza Strip",
+                                "value": 73
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Southeast Asia",
+                        "children": [
+                            {
+                                "name": "Myanmar",
+                                "value": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

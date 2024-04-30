@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Attack Type",
+        "children": [
+            {
+                "name": "Armed Assault",
+                "value": 49553
+            },
+            {
+                "name": "Assassination",
+                "value": 21539
+            },
+            {
+                "name": "Bombing/Explosion",
+                "value": 98158
+            },
+            {
+                "name": "Facility/Infrastructure Attack",
+                "value": 12325
+            },
+            {
+                "name": "Hijacking",
+                "value": 759
+            },
+            {
+                "name": "Hostage Taking (Barricade Incident)",
+                "value": 1156
+            },
+            {
+                "name": "Hostage Taking (Kidnapping)",
+                "value": 14045
+            },
+            {
+                "name": "Unarmed Assault",
+                "value": 1229
+            },
+            {
+                "name": "Unknown",
+                "value": 10942
+            }
+        ]
+    }
+]
