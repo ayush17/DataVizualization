@@ -1,12 +1,13 @@
 window.addEventListener("load", function () {
-  const chart1 = document.getElementById("chart1");
-  const chart2 = document.getElementById("chart2");
-  const myChart1 = echarts.init(chart1);
-  const myChart2 = echarts.init(chart2);
+  let chart1 = document.getElementById("chart1");
+  let chart2 = document.getElementById("chart2");
+  let myChart1 = echarts.init(chart1);
+  let myChart2 = echarts.init(chart2);
 
-  fetch("/data/suicide_attack_sunburst.json")
+  fetch("../data/suicide_attack_sunburst.json")
     .then((response) => response.json())
     .then((data) => {
+      console.log("this is the data json", data);
       let option = {
         visualMap: {
           type: "continuous",
@@ -35,7 +36,7 @@ window.addEventListener("load", function () {
       option = null;
     });
 
-  fetch("/data/attack_type_sunburst.json")
+  fetch("../data/attack_type_sunburst.json")
     .then((response) => response.json())
     .then((data) => {
       let option = {
